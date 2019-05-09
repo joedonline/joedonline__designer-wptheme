@@ -21,10 +21,10 @@
 				printf( esc_html__( 'Proudly powered by %s', 'joed_designer' ), 'WordPress' );
 				?>
 			</a>
-			<span class="sep"> | </span>
+			
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'joed_designer' ), 'joed_designer', '<a href="http://underscores.me/">Underscores.me</a>' );
+				printf( esc_html__( '%1$s %2$s.', '' ), '', '<a href="https://github.com/joedonline" rel="nofollow">github.com/joedonline</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

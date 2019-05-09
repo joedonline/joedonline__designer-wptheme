@@ -1,0 +1,12 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.site-content {
+  .content-area .site-main {
+    * { border: 1px solid red; }
+  }
+
+  .widget-area {
+    * { border: 1px solid red; }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+.site-footer {
+  * { border: 1px solid red; }
+
+  .site-info {
+    display: flex;
+    justify-content: space-between;
+
+    @include media__max-width(map-get($break-point, md)) {
+      flex-direction: column;
+    }
+  } // END .site-info
+
+  .site-info a {
+    flex: 0 1 50%;
+    display: flex;
+
+    &:last-child {
+      justify-content: flex-end;
+
+      @include media__max-width(map-get($break-point, md)) {
+        justify-content: flex-start;
+      }
+    }
+  } // END .site-info a
+
+} // END .site-footer
