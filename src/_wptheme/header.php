@@ -24,10 +24,10 @@
 	<header id="masthead" class="site-header">
 		<div class="connect">
 				<ul>
-					<li class="connect-item"><a href="!#" rel="nofollow">instagram</a></li>
-					<li class="connect-item"><a href="!#" rel="nofollow">github</a></li>
-					<li class="connect-item"><a href="!#" rel="nofollow">email</a></li>
-					<li class="connect-item"><a href="!#" rel="nofollow">back to main website</a></li>
+					<li class="connect-item"><a href="!#" rel="nofollow" title="descriptive link title"><i class="icon icon__instagram"></i></a></li>
+					<li class="connect-item"><a href="!#" rel="nofollow" title="descriptive link title"><i class="icon icon__github"></i></a></li>
+					<li class="connect-item"><a href="!#" rel="nofollow" title="descriptive link title"><i class="icon icon__gmail"></i></a></li>
+					<li class="connect-item"><a href="!#" rel="nofollow" title="descriptive link title"><i class="icon icon__home"></i></a></li>
 				</ul>
 		</div>
 

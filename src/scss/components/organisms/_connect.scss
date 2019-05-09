@@ -2,21 +2,31 @@
 @import "../../utilities/mixins";
 
 
-.connect {
-   * { border: 1px solid  blue; }
+@import "../../universal/iconography";
 
+
+.connect {
    align-self: flex-end;
    display: flex;
 
    ul {
      display: flex;
+     justify-content: center;
+     align-items: center;
    }
 
    &-item {
-     margin-left: 5rem;
+     margin-left: 2.5rem;
 
      &:first-child {
        margin-left: 0;
+     }
+   } // END &-item
+
+   &-item {
+     .icon {
+       height: 2.5rem;
+       width: 2.25rem;
      }
    }
 

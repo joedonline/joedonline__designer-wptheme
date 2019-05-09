@@ -1,0 +1,26 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+
+
+.icon {
+  display: flex;
+  align-items: center;
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+
+  &__instagram {
+    background: url('assets/icon__instagram__see-thru.png') center/contain no-repeat padding-box;
+  }
+
+  &__github {
+    background: url('assets/icon__github.png') center/contain no-repeat padding-box;
+  }
+
+  &__gmail {
+    background: url('assets/icon__gmail.png') center/contain no-repeat padding-box;
+  }
+
+  &__home {
+    background: url('assets/icon__home.png') center/contain no-repeat padding-box;
+  }
+}
