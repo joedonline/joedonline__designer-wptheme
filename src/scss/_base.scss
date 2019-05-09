@@ -1,43 +1,81 @@
-// CUSTOM RESET
-
-:root {
-
-}
-
-$breakpoint-largest: 75em;     // 1200px
-$breakpoint-large: 68.75em;    // 1100px
-$breakpoint-medium: 56.25em;   // 900px
-$breakpoint-small: 37.5em;     // 600px
-$breakpoint-smallest: 31.25em; // 500px
-
+@import "./utilities/variables";
+@import "./utilities/mixins";
+/* reset ***************************************************************** */
 * {
-    margin: 0;
-    padding: 0;
+ margin: 0;
+ padding: 0;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ outline: none;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+ box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+ scroll-behavior: smooth;
+ box-sizing: border-box;
+ font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
 
-    @media only screen and (max-width: $breakpoint-large) {
-        font-size: 50%;
-    }
+ @include media__max-width(map-get($break-point, lg)) {
+  font-size: 50%;
+ }
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    // color: var(--color-grey-dark-2);
-    // background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    min-height: 100vh;
+ font-family: $font--Roboto; // Roboto, Helvetica alternative
+ color: black;
+ font-weight: 400;
+ line-height: 3.2rem; // = 40px
 }
+
+ul {
+ list-style: none;
+}
+
+ul,
+li {
+ margin: 0;
+}
+
+a {
+ text-decoration: none;
+ color: map-get($colors, blue3);
+ transition: all .32s ease-in;
+
+ &:hover,
+ &:active {
+  color: black;
+ }
+}
+
+// GUTTERS
+header,
+nav,
+main,
+aside,
+footer {
+ padding: 2rem 4rem;
+
+ @include media__max-width(map-get($break-point, sm_md)) {
+   padding-left: 2rem;
+   padding-right: 2rem;
+ }
+}
+
+// TYPOGRAPHY
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family: $font--Nanum-Gothic; // Nanum Gothic
+ font-weight: 800; // Extra Bold
+}
+
+
+/* END reset ***************************************************************** */

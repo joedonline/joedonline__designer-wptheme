@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package starter_sandbox
+ * @package joed_designer
  */
 
 get_header();
@@ -17,7 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+<h1>THIS IS INDEX.PHP</h1>
 		<?php
 		if ( have_posts() ) :
 

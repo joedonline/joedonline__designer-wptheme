@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package starter_sandbox
+ * @package joed_designer
  */
 
 /*
@@ -28,18 +28,18 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$starter_sandbox_comment_count = get_comments_number();
-			if ( '1' === $starter_sandbox_comment_count ) {
+			$joed_designer_comment_count = get_comments_number();
+			if ( '1' === $joed_designer_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'starter_sandbox' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'joed_designer' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $starter_sandbox_comment_count, 'comments title', 'starter_sandbox' ) ),
-					number_format_i18n( $starter_sandbox_comment_count ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $joed_designer_comment_count, 'comments title', 'joed_designer' ) ),
+					number_format_i18n( $joed_designer_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			}
@@ -63,7 +63,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'starter_sandbox' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'joed_designer' ); ?></p>
 			<?php
 		endif;
 

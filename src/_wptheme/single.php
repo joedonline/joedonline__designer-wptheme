@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package starter_sandbox
+ * @package joed_designer
  */
 
 get_header();
