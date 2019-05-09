@@ -3,5 +3,9 @@
 
 
 .site-header {
-  * {border: 1px solid red;}
+  // * {border: 1px solid red;}
+  display: flex;
+  flex-direction: column;
+
+  @import "./organisms/connect";
 }

@@ -13,3 +13,4 @@ package-lock.json
 *.TIF
 starter_sandbox.zip
 .DS_Store
+__notes.txt

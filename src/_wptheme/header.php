@@ -22,6 +22,15 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
+		<div class="connect">
+				<ul>
+					<li class="connect-item"><a href="!#" rel="nofollow">instagram</a></li>
+					<li class="connect-item"><a href="!#" rel="nofollow">github</a></li>
+					<li class="connect-item"><a href="!#" rel="nofollow">email</a></li>
+					<li class="connect-item"><a href="!#" rel="nofollow">back to main website</a></li>
+				</ul>
+		</div>
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();

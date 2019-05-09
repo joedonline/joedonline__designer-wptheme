@@ -1,0 +1,23 @@
+@import "../../utilities/variables";
+@import "../../utilities/mixins";
+
+
+.connect {
+   * { border: 1px solid  blue; }
+
+   align-self: flex-end;
+   display: flex;
+
+   ul {
+     display: flex;
+   }
+
+   &-item {
+     margin-left: 5rem;
+
+     &:first-child {
+       margin-left: 0;
+     }
+   }
+
+}
