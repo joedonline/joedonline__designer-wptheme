@@ -25,9 +25,9 @@ const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 
 // CONSTANT VARS
 const DIST_PATH = 'dist/';
-const LOCALWP_MYCUSTOMTHEME_PATH = 'localwp/wp-content/themes/mycustomtheme/';
+const LOCALWP_MYCUSTOMTHEME_PATH = 'localwp/wp-content/themes/joeddesignertheme/';
 const IMAGES_PATH = 'src/_wptheme/img/**/*.{png,jpeg,jpg,svg,gif}';
-const PROXY_PATH = `http://localhost:[port number -- 8888 or 8080 most likely]/path/to/where/you/cloned/gulp__wordpress`;
+const PROXY_PATH = `http://localhost:8888/joedomingo.online/__PORTFOLIO/portfolio-2019-wordpress/designer__portfolio__wordpress/localwp/`;
 
 gulp.task('default', ['clean', 'images', 'sass', 'babel', 'wordpress', 'browsersync'], () => {
     gulp.watch("./localwp/**/*").on('change', browserSync.reload);
