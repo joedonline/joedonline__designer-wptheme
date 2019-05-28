@@ -1,0 +1,14 @@
+@import "../../utilities/variables";
+@import "../../utilities/mixins";
+
+@import "../../universal/iconography";
+
+
+.site {
+  &-branding {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+}

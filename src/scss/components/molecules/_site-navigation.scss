@@ -1,0 +1,11 @@
+@import "../../utilities/variables";
+@import "../../utilities/mixins";
+
+@import "../../universal/iconography";
+
+#site-navigation {
+  background: red;
+  height: 5rem;
+  margin-top: 5vmax;
+  margin-bottom: 5vmax;
+}

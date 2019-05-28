@@ -16,7 +16,7 @@
    }
 
    &-item {
-     margin-left: 2.5rem;
+     margin-left: 2.5vmax;
 
      &:first-child {
        margin-left: 0;
@@ -25,8 +25,9 @@
 
    &-item {
      .icon {
-       height: 2.5rem;
-       width: 2.25rem;
+       width: auto;
+       height: 1.5vmax;
+       border-radius: 0.5rem;
      }
    }
 

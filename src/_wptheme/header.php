@@ -22,14 +22,8 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<div class="connect">
-				<ul>
-					<li class="connect-item"><a href="!#" rel="nofollow" title="descriptive link title"><i class="icon icon__instagram"></i></a></li>
-					<li class="connect-item"><a href="!#" rel="nofollow" title="descriptive link title"><i class="icon icon__github"></i></a></li>
-					<li class="connect-item"><a href="!#" rel="nofollow" title="descriptive link title"><i class="icon icon__gmail"></i></a></li>
-					<li class="connect-item"><a href="!#" rel="nofollow" title="descriptive link title"><i class="icon icon__home"></i></a></li>
-				</ul>
-		</div>
+
+		<?php get_template_part( 'template-parts/content__social-connect', get_post_type() ); ?>
 
 		<div class="site-branding">
 			<?php
@@ -50,14 +44,24 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'joed_designer' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
+		<!-- SITE LOGO -->
+		<?php cpt_query__while(
+										'joed_sitegraphics', // $postType
+										'publish', // $postStatus
+										'-1', // $postsPerPage
+										'template-parts/graphics__sitelogo', // $templatePart
+										'Sorry, no posts matched your criteria.' // $message
+								);
+		?>
+
+		<nav id="site-navigation" class="site-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'joed_designer' ); ?></button>
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+				?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

@@ -3,9 +3,13 @@
 
 
 .site-header {
-  // * {border: 1px solid red;}
+  border: 1px solid magenta;
   display: flex;
   flex-direction: column;
+  min-height: 5rem;
 
   @import "./organisms/connect";
+  @import './organisms/site-branding';
+  @import './molecules/site-logo';
+  @import './molecules/site-navigation';
 }
