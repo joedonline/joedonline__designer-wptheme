@@ -18,9 +18,10 @@ function cpt_query__while($postType, $postStatus, $postsPerPage, $templatePart, 
 
   $joed__Query = new WP_Query( $joed__args );
   if ( $joed__Query->have_posts() ) :
-
     while ( $joed__Query->have_posts() ) : $joed__Query->the_post();
-      get_template_part( $templatePart );
+
+      get_template_part( $templatePart, get_post_type() );
+      
     endwhile;
     wp_reset_postdata();
   else : ?>

@@ -23,25 +23,36 @@
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 
-		<?php get_template_part( 'template-parts/content__social-connect', get_post_type() ); ?>
+		<!-- SITE SOCIAL -->
+		<ul class="connect">
+				<?php cpt_query__while(
+												'joed_socialconnect', // $postType
+												'publish', // $postStatus
+												'-1', // $postsPerPage
+												'template-parts/content__social-connect', // $templatePart
+												'Sorry, no posts matched your criteria.' // $message
+										);
+				?>
+		</ul>
 
+		<!-- SITE BRANDING -->
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$joed_designer_description = get_bloginfo( 'description', 'display' );
-			if ( $joed_designer_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $joed_designer_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+				the_custom_logo();
+				if ( is_front_page() && is_home() ) :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+				endif;
+				$joed_designer_description = get_bloginfo( 'description', 'display' );
+				if ( $joed_designer_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $joed_designer_description; /* WPCS: xss ok. */ ?></p>
+				<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<!-- SITE LOGO -->
