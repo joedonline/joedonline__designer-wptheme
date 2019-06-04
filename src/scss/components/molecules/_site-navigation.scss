@@ -4,8 +4,49 @@
 @import "../../universal/iconography";
 
 #site-navigation {
-  background: red;
   height: 5rem;
-  margin-top: 5vmax;
+  margin-top: 1.5vmax;
   margin-bottom: 5vmax;
+  display: flex;
+  justify-content: space-between;
+
+
+  .menu {
+    &-toggle,
+    &-main-menu-container {
+      line-height: 1;
+    }
+
+    &-toggle {
+      background: pink;
+      order: 1;
+    }
+
+    &-main-menu-container {
+      order: 0;
+    }
+
+    &-main-menu-container ul {
+      display: flex;
+    }
+
+    &-item {
+      // margin-right: 5vmax;
+      //
+      // &:last-child {
+      //   margin-right: 0;
+      // }
+    }
+
+    &-item a {
+      font-family: $font--Oswald;
+      font-size: 2.5vmin;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+      background-color: map-get($colors, fb--blue);
+      color: map-get($colors, fb--pale-white);
+      padding: 1vmax 3vmax;
+    }
+  } // END .menu
 }

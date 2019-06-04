@@ -1,0 +1,35 @@
+@import "../../utilities/variables";
+@import "../../utilities/mixins";
+
+
+.site-header__categories {
+
+  .post-categories {
+    display: flex;
+    align-items: center;
+
+    li {
+      padding-right: 1.5vmin;
+      margin-right: 1.5vmin;
+      border-right: 2px solid map-get($colors, fb--gray);
+      line-height: 1;
+      transform: scaleY(1.16);
+
+      &:last-child {
+        padding-right: 0;
+        margin-right: 0;
+        border: none;
+      }
+    }
+
+    li a {
+      font-family: $font--Oswald;
+      font-size: 2.5vmin;
+      font-weight: 700;
+      color: map-get($colors, fb--gray);
+      text-transform: lowercase;
+      line-height: 0.75;
+      transform: scaleY(1.618);
+    }
+  } // END .post-categories
+} // END .site-header__categories

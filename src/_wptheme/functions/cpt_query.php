@@ -1,9 +1,9 @@
 <?php
 /**
- * Wrapper functions to query custom post types that uses Advanced Custom Fields
- * -- requires a custom template part.
+ * Wrapper function for querying custom post types that implements Advanced Custom Fields plugin.
+ * NOTE -- requires a custom template part.
  *
- * @link https://github.com/joedonline
+ * @link https://github.com/joedonline/joedonline__designer-wptheme
  *
  * @package joed_designer
  */
@@ -21,7 +21,7 @@ function cpt_query__while($postType, $postStatus, $postsPerPage, $templatePart, 
     while ( $joed__Query->have_posts() ) : $joed__Query->the_post();
 
       get_template_part( $templatePart, get_post_type() );
-      
+
     endwhile;
     wp_reset_postdata();
   else : ?>

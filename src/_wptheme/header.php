@@ -65,6 +65,16 @@
 								);
 		?>
 
+		<!-- SITE HEADER, CATEGORIES -->
+		<?php cpt_query__while(
+										'post', // $postType
+										'publish', // $postStatus
+										'-1', // $postsPerPage
+										'template-parts/content__header-categories', // $templatePart
+										'Sorry, no categories found.' // $message
+								);
+		?>
+
 		<nav id="site-navigation" class="site-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'joed_designer' ); ?></button>
 				<?php
