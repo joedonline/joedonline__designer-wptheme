@@ -3,7 +3,6 @@
 
 
 .site-header__categories {
-
   .post-categories {
     display: flex;
     align-items: center;
@@ -30,6 +29,12 @@
       text-transform: lowercase;
       line-height: 0.75;
       transform: scaleY(1.618);
+      transition: $transition-eio;
+
+      &:hover,
+      &:active {
+        color: map-get($colors, fb2--dark-blue);
+      }
     }
   } // END .post-categories
 } // END .site-header__categories

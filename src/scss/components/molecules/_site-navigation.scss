@@ -3,13 +3,26 @@
 
 @import "../../universal/iconography";
 
-#site-navigation {
-  height: 5rem;
-  margin-top: 1.5vmax;
+nav#site-navigation,
+nav.site-navigation {
+  height: 4.25vmax;
+  margin-top: 2.5vmax;
   margin-bottom: 5vmax;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
+  button.menu-toggle[aria-controls="primary-menu"] {
+    width: 4vmax;
+    height: 4vmax;
+    border: none;
+    cursor: pointer;
+    transition: $transition-eio;
+
+    &:hover {
+      opacity: 0.92;
+    }
+  }
 
   .menu {
     &-toggle,
@@ -30,23 +43,27 @@
       display: flex;
     }
 
-    &-item {
-      // margin-right: 5vmax;
-      //
-      // &:last-child {
-      //   margin-right: 0;
-      // }
-    }
-
     &-item a {
       font-family: $font--Oswald;
       font-size: 2.5vmin;
       font-weight: 700;
       text-transform: uppercase;
       line-height: 1;
-      background-color: map-get($colors, fb--blue);
-      color: map-get($colors, fb--pale-white);
       padding: 1vmax 3vmax;
-    }
+      transition: $transition-eio;
+
+      &:link {
+        background-color: rgba(0,0,0,0);
+        color: map-get($colors, fb2--pale-blue);
+      }
+
+      &:hover,
+      &:active,
+      &[aria-current="page"] {
+        background-color: map-get($colors, fb2--pale-blue);
+        color: map-get($colors, justice--clean-white);
+        box-shadow: 0 0 0.125rem map-get($colors, fb2--black);
+      }
+    } // END &-item a
   } // END .menu
 }

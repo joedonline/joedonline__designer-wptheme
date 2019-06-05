@@ -75,15 +75,17 @@
 								);
 		?>
 
-		<nav id="site-navigation" class="site-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'joed_designer' ); ?></button>
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-				?>
-		</nav><!-- #site-navigation -->
+		<!-- SITE HEADER, NAVIGATION -->
+		<?php cpt_query__while(
+										'joed_sitegraphics', // $postType
+										'publish', // $postStatus
+										'-1', // $postsPerPage
+										'template-parts/content__header-navigation', // $templatePart
+										'Sorry, no navigation items found.' // $message
+								);
+		?>
+
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
