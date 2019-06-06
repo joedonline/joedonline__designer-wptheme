@@ -32,14 +32,16 @@ body {
 .site-options-settings__wrapper {
   background: white;
   width: 96%;
+  height: 100vmax;
   padding: 2.5vmax;
   display: flex;
   flex-direction: column;
 }
 
-.site-options-settings {
+.site-options-settings__header {
   background: ivory;
-  padding: 0;
+  padding: 2vmax;
+  border-radius: 2rem;
   border: 1px solid teal;
 }
 
@@ -47,11 +49,18 @@ body {
 
 
 <div class="site-options-settings__wrapper">
-  <div class="site-options-settings">
+  <header class="site-options-settings__header">
     <h1>Site Options Admin</h1>
-    <h3>Settings</h3>
+    <?php settings_errors(); ?>
+    <h2>Settings</h2>
     <p>All website settings such as general-use ACF fields, some graphics perhaps, and external url's, etc. will be addressed in the admin page.</p>
-  </div>
+  </header>
 
-  <h2><?php echo get_field( 'my_website_url' ); ?> - my website url<h2>
+  <section class="site-options-settings__section">
+    <form class="site-options-settings__form" action="options.php" method="post">
+      <?php settings_fields( 'joed_designer-settings-group' ); ?>
+      <?php do_settings_sections( 'joed-site-options' ); ?>
+      <?php submit_button(); ?>
+    </form>
+  </section>
 </div>

@@ -40,10 +40,44 @@ function joed_designer_add_admin_page() {
     'joed_site_options_styles_page', // Callback function
   );
 
-  // Activate
+  // Activate Custom Settings
+  add_action( 'admin_init', 'joed_designer_custom_settings' );
 
 }
 add_action( 'admin_menu', 'joed_designer_add_admin_page' );
+
+
+function joed_designer_custom_settings() {
+  register_setting(
+    'joed_designer-settings-group', // Option group
+    'main_website_url', // Option name
+  );
+
+  add_settings_section(
+    'joed_designer-website-options', // String id
+    'Website Options Settings', // String title
+    'joed_designer_website_options', // String callback
+    'joed-site-options' // String page
+  );
+
+  add_settings_field(
+    'main-website-url', // Id
+    'My Main Website URL', // Title
+    'main_website_url', // Callback
+    'joed-site-options', // Page
+    'joed_designer-website-options', // Section
+    // '' // Arguments/parameters
+  );
+}
+
+function joed_designer_website_options() {
+  echo 'Customize your main website settings.';
+}
+
+function main_website_url() {
+  $mywebsiteurl = esc_attr( get_option( 'main_website_url' ) );
+  echo '<input type="text" name="main_website_url" value="'.$mywebsiteurl.'" placeholder="https//yourwebsite.url" />';
+}
 
 
 function joed_site_options_page() {
