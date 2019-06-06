@@ -2,7 +2,9 @@
 @import "../utilities/mixins";
 
 .site-footer {
-  * { border: 1px solid red; }
+  margin: 2.5vmax auto 0;
+  font-size: 2vmin;
+  color: map-get($colors, fb2--dark-blue);
 
   .site-info {
     display: flex;
@@ -15,7 +17,13 @@
 
   .site-info a {
     flex: 0 1 50%;
+    color: map-get($colors, fb2--blue);
     display: flex;
+    transition: $transition-eo;
+
+    &:hover {
+      color: map-get($colors, justice--gray);
+    }
 
     &:last-child {
       justify-content: flex-end;

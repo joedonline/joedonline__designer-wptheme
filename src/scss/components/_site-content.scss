@@ -2,11 +2,29 @@
 @import "../utilities/mixins";
 
 .site-content {
+  margin-top: 1.5vmax;
+
   .content-area .site-main {
-    * { border: 1px solid red; }
-  }
+    padding: 0;
+
+    article {
+
+      .entry {
+        &-header { // <h2>
+          font-family: $font--Nunito;
+          font-size: 2.5vmin;
+          font-weight: 800;
+          text-transform: uppercase;
+        }
+
+        &-content { // <div>
+          font-size: 2vmin;
+        }
+      } // END .entry
+    } // END article
+  } // END .content-area .site-main
 
   .widget-area {
-    * { border: 1px solid red; }
+
   }
 }

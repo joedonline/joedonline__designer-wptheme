@@ -166,3 +166,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	* Other custom functions
 	*/
 require get_template_directory() . '/functions/cpt_query.php';
+require get_template_directory() . '/functions/admin.php';

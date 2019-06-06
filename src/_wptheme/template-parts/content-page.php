@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<h2><?php echo get_field('page_display_title'); ?></h2>
 	</header><!-- .entry-header -->
 
 	<?php starter_sandbox_post_thumbnail(); ?>
