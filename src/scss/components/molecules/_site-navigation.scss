@@ -28,6 +28,10 @@ nav.site-navigation {
     &-toggle,
     &-main-menu-container {
       line-height: 1;
+      padding-top: 1vmax;
+      padding-bottom: 1vmax;
+      border-top: 1px solid map-get($colors, fb2--blue);
+      border-bottom: 1px solid map-get($colors, fb2--blue);
     }
 
     &-toggle {

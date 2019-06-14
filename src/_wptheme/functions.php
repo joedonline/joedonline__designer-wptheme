@@ -167,3 +167,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	*/
 require get_template_directory() . '/functions/cpt_query.php';
 require get_template_directory() . '/functions/admin.php';
+require get_template_directory() . '/functions/templates/enqueue.php';

@@ -2,6 +2,30 @@
 @import "../../../scss/utilities/mixins";
 
 
-div.site-options-settings {
-  background: red !important; // temporary
-}
+.site-options-settings {
+  &__wrapper {
+    background-color: map-get($colors, justice--clean-white);
+    width: 92%;
+  }
+
+  &__header,
+  &__section {
+    padding: 2rem 4rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      display: block;
+      width: 100%;
+    }
+
+    p.submit input {
+      height: 10vmin;
+      width: 50vmin;
+      font-size: 2.5vmin;
+    }
+  } // END &__form
+} // END .site-options-settings
