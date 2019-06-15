@@ -3,11 +3,11 @@
 
 
 .site-header__categories {
-  .post-categories {
+  .cat { // <ul>
     display: flex;
     align-items: center;
 
-    li {
+    &-item { // <li>
       padding-right: 1.5vmin;
       margin-right: 1.5vmin;
       border-right: 2px solid map-get($colors, fb--gray);
@@ -21,7 +21,7 @@
       }
     }
 
-    li a {
+    &-item a { // <li><a>
       font-family: $font--Oswald;
       font-size: 2.5vmin;
       font-weight: 700;
@@ -32,9 +32,18 @@
       transition: $transition-eio;
 
       &:hover,
-      &:active {
+      &:active,
+      &[aria-current="graphic-design"],
+      &[aria-current="motion-graphics"],
+      &[aria-current="photography"],
+      &[aria-current="ui-ux"] {
         color: map-get($colors, fb2--dark-blue);
       }
+    }
+
+    &-item sub {
+      font-family: $font--Anonymous-Pro;
+      font-size: 1.75vmin;
     }
   } // END .post-categories
 } // END .site-header__categories
