@@ -43,7 +43,7 @@ li {
 
 a {
  text-decoration: none;
- color: map-get($colors, blue3);
+ color: map-get($colors, fb--blue);
  transition: all .32s ease-in;
 
  &:hover,

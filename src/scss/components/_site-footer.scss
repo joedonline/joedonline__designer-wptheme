@@ -2,7 +2,7 @@
 @import "../utilities/mixins";
 
 .site-footer {
-  margin: 2.5vmax auto 0;
+  margin: 3.5vmax auto 2.5vmax;
   font-size: 2vmin;
   color: map-get($colors, fb2--dark-blue);
 

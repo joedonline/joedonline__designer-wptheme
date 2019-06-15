@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package starter_sandbox
+ * @package joed_designer
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function starter_sandbox_jetpack_setup() {
+function joed_designer_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'starter_sandbox_infinite_scroll_render',
+		'render'    => 'joed_designer_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,7 +28,7 @@ function starter_sandbox_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'starter_sandbox-style',
+			'stylesheet' => 'joed_designer-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -42,12 +42,12 @@ function starter_sandbox_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'starter_sandbox_jetpack_setup' );
+add_action( 'after_setup_theme', 'joed_designer_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function starter_sandbox_infinite_scroll_render() {
+function joed_designer_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

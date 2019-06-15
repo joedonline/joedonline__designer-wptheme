@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package starter_sandbox
+ * @package joed_designer
  */
 
 ?>
@@ -14,14 +14,14 @@
 			<h2><?php echo get_field('page_display_title'); ?></h2>
 	</header><!-- .entry-header -->
 
-	<?php starter_sandbox_post_thumbnail(); ?>
+	<?php joed_designer_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content();
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'starter_sandbox' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'joed_designer' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -34,7 +34,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'starter_sandbox' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'joed_designer' ),
 						array(
 							'span' => array(
 								'class' => array(),
