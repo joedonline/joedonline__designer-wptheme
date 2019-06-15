@@ -21,10 +21,8 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-				<?php
-				joed_designer_posted_on();
-				joed_designer_posted_by();
-				?>
+				<!-- done on purpose - entry_footer() switched with posted_on() and posted_by() -->
+				<?php joed_designer_entry_footer(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -59,7 +57,11 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php joed_designer_entry_footer(); ?>
+		<!-- done on purpose - entry_footer() switched with posted_on() and posted_by() -->
+		<?php
+		joed_designer_posted_on();
+		joed_designer_posted_by();
+		?>
 	</footer><!-- .entry-footer -->
 
 	<?php

@@ -8,63 +8,84 @@
   .content-area {
     main.site-main.single {
       display: block;
+      box-shadow: none;
 
       article {
         border: none;
         padding: 0;
-      }
-    }
 
-    nav.navigation.post-navigation { // <nav>
-      padding: 0;
-
-      h2 {
-        font-size: 2.5vmin;
-        margin-bottom: 1vmin;
-      }
-
-      .nav-links a {
-        color: map-get($colors, fb--blue);
-        font-size: 2vmin;
-        text-decoration: underline;
-        line-height: 1.12;
-
-        &:hover {
-          text-decoration: none;
+        header .entry-title {
+          text-transform: uppercase;
         }
-      }
 
-      .nav-links {
-        padding: 2rem 1rem;
-        border-radius: 0.5rem;
-        background-color: map-get($colors, justice--dirty-white);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        header .entry-meta .cat-links {
+          letter-spacing: 0.0625rem !important;
+        }
+      } // END article
 
-        .nav-previous::before,
-        .nav-next::after {
+      nav.navigation.post-navigation { // <nav>
+        margin-top: 5vmin;
+        padding: 0;
+
+        h2 {
+          font-size: 2.5vmin;
+          margin-bottom: 1vmin;
+        }
+
+        .nav-links a {
+          color: map-get($colors, fb--blue);
           font-size: 2vmin;
-          line-height: 1;
+          text-decoration: underline;
+          line-height: 1.12;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
 
-        .nav-previous::before {
-          content: "<=";
-          margin-right: 1.25rem;
-        }
+        .nav-links {
+          padding: 2rem;
+          box-shadow: 0 0 1rem rgba(162,162,162,0.16);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
 
-        .nav-next::after {
-          content: "=>";
-          margin-left: 1.25rem;
+          .nav-previous::before,
+          .nav-next::after {
+            font-size: 2vmin;
+            line-height: 1;
+          }
+
+          .nav-previous::before {
+            content: "<=";
+            margin-right: 1.25rem;
+          }
+
+          .nav-next::after {
+            content: "=>";
+            margin-left: 1.25rem;
+          }
         }
+      } // nav.navigation.post-navigation
+    } // END main.site-main.single
+
+    main.site-main.page {
+      box-shadow: none;
+
+      article {
+        flex: 0 1 100%;
+        padding: 0;
+        border: none;
       }
-    }
+    } // END main.site-main-page
   } // END .content-area
   // END single template
 
   // index template
   .content-area .site-main {
     padding: 0;
+    margin-bottom: 4vmax;
+    box-shadow: 0 0 1rem rgba(162,162,162,0.16);
     display: flex;
     flex-wrap: wrap;
 
@@ -81,17 +102,14 @@
 
     article {
       flex: 0 1 33.3333%;
-      border: 1px solid rgba(104,104,104,0.08);
-      padding: 2rem;
-      margin-bottom: 4vmax;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+      border: 1px solid rgba(162,162,162,0.08);
+      padding: 2vmin 2.5vmin 8vmin;
+      margin: 0;
 
       .post-thumbnail img {
         width: 100%;
         height: auto;
+        margin-bottom: 2rem;
       }
 
       .entry {
@@ -104,12 +122,17 @@
         &-title {
           margin-bottom: 1rem;
           font-size: 5vmin;
-          color: map-get($colors, fb2--pale-blue);
+          color: map-get($colors, fb2--dark-blue);
           text-transform: none;
-          line-height: 1.08;
+          line-height: 1.04;
 
           a {
            text-transform: lowercase;
+           color: map-get($colors, fb2--pale-blue);
+
+           &:hover {
+             color: map-get($colors, fb--pale-blue);
+           }
           }
         }
 
@@ -119,13 +142,10 @@
           font-weight: 400;
           margin-bottom: 0.5vmin;
 
-          .posted-on {
-            border-right: 1px solid map-get($colors, fb2--blue);
-            padding-right: 1.25rem;
-          }
-
-          .byline {
-            padding-left: 1rem;
+          .cat-links {
+            font-size: 1.75vmin;
+            letter-spacing: 0.25rem;
+            line-height: 1;
           }
         }
 
@@ -231,8 +251,13 @@
         } // END &-content
 
         &-footer { // <footer>
-          .cat-links {
-            font-size: 1.75vmin;
+          .posted-on {
+            border-right: 1px solid map-get($colors, fb2--blue);
+            padding-right: 1.25rem;
+          }
+
+          .byline {
+            padding-left: 1rem;
           }
         }
       } // END .entry
