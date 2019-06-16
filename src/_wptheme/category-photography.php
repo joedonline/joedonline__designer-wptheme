@@ -40,6 +40,7 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<h1>I AM CATEGORY-PHOTOGRAPHY.PHP</h1>
 
 <?php
 get_sidebar();

@@ -1,0 +1,121 @@
+@import "../../utilities/variables";
+@import "../../utilities/mixins";
+
+
+.site-content {
+  margin-top: 1.5vmax;
+
+  // single template
+  .archive {
+    .page {
+      &-header { // <header>
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &-title { // <h2>
+        font-family: $font--Oswald;
+        font-weight: 200;
+        font-size: 5vmin;
+        color: map-get($colors, fb--gray);
+        letter-spacing: 1.618px;
+        text-transform: lowercase;
+
+        &.coming-soon {
+          font-family: $font--Open-Sans;
+          text-transform: uppercase;
+        }
+      }
+
+      &-content {
+        .coming-soon {
+          font-size: 2.5vmin;
+          width: 72%;
+        }
+      }
+    } // END .page
+
+    main.site-main {
+      box-shadow: none;
+
+      article.post {
+        border: 1px solid rgba(162,162,162, 0.24);
+        background-origin: border-box !important;
+        padding: 0;
+        height: 100%;
+
+        &::before,
+        &::after {
+          flex-basis: 0; // not working at the moment...
+          order: 1; // not working at the moment...
+        }
+
+        .post-wrapper {
+          &__outer {
+            background-color: rgba(0,0,8,0.72);
+            background-origin: content-box;
+            padding: 2vmin 2.5vmin 2vmin;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-direction: column;
+          }
+
+          &__inner {
+
+          }
+        }
+      } // END article.post
+
+      a.post-thumbnail img {
+        padding: 0.5vmin;
+        border-radius: 0.25rem;
+        background-color: map-get($colors, fb--gray);
+        transition: $transition-ei;
+
+        &:hover {
+          opacity: 0.88;
+        }
+      }
+
+      .entry {
+        &-header { // <header>
+          padding-top: 0;
+
+          &__title { // <h2>
+            line-height: 0.75;
+            margin-bottom: 0;
+          }
+
+          &__title a { // <h2><a>
+            color: map-get($colors, justice--dirty-white);
+            font-size: 2.5vmin;
+            text-transform: uppercase;
+          }
+        }
+
+        &-footer { // <footer>
+          padding: 0;
+          display: flex;
+          justify-content: flex-end;
+
+          &__permalink { // <a>
+            padding: 1.25vmin 5vmin;
+            font-size: 2.5vmin;
+            color: white;
+            background-color: map-get($colors, fb2--dark-blue);
+            border-radius: 0.5rem;
+            border: 1px solid map-get($colors, fb2--dark-blue);
+            transition: $transition-eo;
+
+            &:hover {
+              color: map-get($colors, fb2--dark-blue);
+              background-color: transparent;
+            }
+          }
+        }
+      } // END .entry
+    } // END main.site-main
+  } // END .archive
+} // END .site-content

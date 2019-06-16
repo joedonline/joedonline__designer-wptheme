@@ -6,5 +6,8 @@
 @import './components/site-content';
 @import './components/site-footer';
 
+// other templates
+@import './components/organisms/site-archive';
+
 // backend templates
 @import '../_wptheme/functions/templates/admin-template';

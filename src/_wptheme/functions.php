@@ -163,11 +163,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 /**
-	* Other custom functions
+	* =============================================================================
+	* MY CUSTOM FUNCTIONS
 	*/
 require get_template_directory() . '/functions/cpt_query.php';
 require get_template_directory() . '/functions/admin.php';
 require get_template_directory() . '/functions/templates/enqueue.php';
+
 
 /**
  * Filter the except length to 20 words.
@@ -179,3 +181,25 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 24;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+/**
+	* Remove or modify titles from Categories, Authors, and Tags
+	* @param string $title
+	* @return string $title
+	*/
+add_filter( 'get_the_archive_title', function ($title) {
+		if ( is_category() ) {
+		  $title = single_cat_title( 'Some of my work in ', false );
+  }
+
+		elseif ( is_tag() ) {
+		  $title = single_tag_title( '', false );
+  }
+
+		elseif ( is_author() ) {
+		  $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+  }
+
+		return $title;
+});

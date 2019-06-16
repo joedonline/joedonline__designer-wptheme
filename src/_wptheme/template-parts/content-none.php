@@ -4,14 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package starter_sandbox
+ * @package joed_designer
  */
 
 ?>
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'starter_sandbox' ); ?></h1>
+		<h2 class="page-title coming-soon"><?php esc_html_e( 'Coming Soon', 'joed_designer' ); ?></h2>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -21,7 +21,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'starter_sandbox' ),
+					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'joed_designer' ),
 					array(
 						'a' => array(
 							'href' => array(),
@@ -34,16 +34,15 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'starter_sandbox' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'joed_designer' ); ?></p>
 			<?php
 			get_search_form();
 
 		else :
 			?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'starter_sandbox' ); ?></p>
+			<p class="page-content coming-soon"><?php esc_html_e( 'It seems the post you&rsquo;re looking for is not here or I&rsquo;m still working on it or possibly updating the files. Come back again soon.', 'joed_designer' ); ?></p>
 			<?php
-			get_search_form();
 
 		endif;
 		?>
